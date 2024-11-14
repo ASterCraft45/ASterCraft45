@@ -1,3 +1,74 @@
-<div class="rainbow-text">
-    <span class="block-line"><span><span style="color:#ff0000">★</span><span style="color:#ff1a00">彡</span><span style="color:#ff2f00">[</span><span style="color:#ff4800">ꜱ</span><span style="color:#ff5e00">ᴇ</span><span style="color:#ff7700">ʟ</span><span style="color:#ff8c00">ᴀ</span><span style="color:#ffa600">ᴍ</span><span style="color:#ffbb00">ᴀ</span><span style="color:#ffd500">ᴛ&nbsp;</span></span><span><span style="color:#ffea00">ᴅ</span><span style="color:#ffff00">ᴀ</span><span style="color:#e6ff00">ᴛ</span><span style="color:#d0ff00">ᴀ</span><span style="color:#b7ff00">ɴ</span><span style="color:#a1ff00">ɢ&nbsp;</span></span><span><span style="color:#88ff00">ᴅ</span><span style="color:#73ff00">ɪ&nbsp;</span></span><span><span style="color:#59ff00">ɢ</span><span style="color:#44ff00">ɪ</span><span style="color:#2bff00">ᴛ</span><span style="color:#15ff00">ʜ</span><span style="color:#00ff00">ᴜ</span><span style="color:#00ff19">ʙ&nbsp;</span></span><span><span style="color:#00ff2f">ᴠ</span><span style="color:#00ff48">ᴘ</span><span style="color:#00ff5e">ɴ&nbsp;</span></span><span><span style="color:#00ff77">ʀ</span><span style="color:#00ff8c">ᴇ</span><span style="color:#00ffa6">ᴘ</span><span style="color:#00ffbb">ᴜ</span><span style="color:#00ffd5">ʙ</span><span style="color:#00ffea">ʟ</span><span style="color:#00fbff">ɪ</span><span style="color:#00e5ff">ᴄ&nbsp;</span></span><span><span style="color:#00d0ff">ꜱ</span><span style="color:#00b7ff">ᴛ</span><span style="color:#00a1ff">ᴏ</span><span style="color:#0088ff">ʀ</span><span style="color:#0073ff">ᴇ&nbsp;</span></span><span><span style="color:#0059ff">ᴅ</span><span style="color:#0044ff">ɪ</span><span style="color:#002bff">ʙ</span><span style="color:#0015ff">ᴜ</span><span style="color:#0400ff">ᴀ</span><span style="color:#1900ff">ᴛ&nbsp;</span></span><span><span style="color:#2f00ff">ᴏ</span><span style="color:#4800ff">ʟ</span><span style="color:#5e00ff">ᴇ</span><span style="color:#7700ff">ʜ&nbsp;</span></span><span><span style="color:#8c00ff">ᴘ</span><span style="color:#a600ff">ʀ</span><span style="color:#bb00ff">ᴏ</span><span style="color:#d400ff">ꜰ</span><span style="color:#ea00ff">ᴇ</span><span style="color:#ff00fb">ꜱ</span><span style="color:#ff00e6">ᴏ</span><span style="color:#ff00d0">ʀ&nbsp;</span></span><span><span style="color:#ff00b7">ᴀ</span><span style="color:#ff00a1">ᴍ</span><span style="color:#ff0088">ᴘ</span><span style="color:#ff0073">ᴏ</span><span style="color:#ff0059">ʜ</span><span style="color:#ff0044">]</span><span style="color:#ff002b">彡</span><span style="color:#ff0015">★</span></span></span>
-</div>
+.windows8 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.windows8 .ball {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    opacity: 0;
+    transform: rotate(225deg);
+    animation: windows8-spin 5.5s infinite;
+}
+
+.windows8 .ball::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #000000;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+}
+
+.windows8 .ball:nth-child(1) { animation-delay: 0.24s; }
+.windows8 .ball:nth-child(2) { animation-delay: 0.48s; }
+.windows8 .ball:nth-child(3) { animation-delay: 0.72s; }
+.windows8 .ball:nth-child(4) { animation-delay: 0.96s; }
+.windows8 .ball:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes windows8-spin {
+    0% {
+        opacity: 1;
+        transform: rotate(180deg);
+        animation-timing-function: ease-out;
+    }
+
+    7% {
+        opacity: 1;
+        transform: rotate(300deg);
+        animation-timing-function: linear;
+    }
+
+    30% {
+        opacity: 1;
+        transform: rotate(410deg);
+        animation-timing-function: ease-in-out;
+    }
+
+    39% {
+        opacity: 1;
+        transform: rotate(645deg);
+        animation-timing-function: linear;
+    }
+
+    70% {
+        opacity: 1;
+        transform: rotate(770deg);
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        opacity: 1;
+        transform: rotate(900deg);
+        animation-timing-function: ease-out;
+    }
+
+    76%, 100% {
+        opacity: 0;
+        transform: rotate(900deg);
+    }
+}
